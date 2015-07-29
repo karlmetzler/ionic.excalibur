@@ -1,0 +1,26 @@
+<ion-view view-title="Performance">
+	<ion-content class="padding">
+		<div id="specs">
+			<h1><span class="model-title">Excalibur</span> {{ baseConfig.bow_name }}</h1>
+			<span class="spec-arrow">Arrow Drop</span>
+		</div>
+		<canvas id="myChart" linechart options="chartOptions" data="chart" responsive=true></canvas>
+		<div class="list">
+			<div class="item item-divider">
+				Arrow Drop
+			</div>
+			<div class="item" ng-repeat="drop in trajectory">
+				{{ drop.drop }} inches at {{ drop.yardage }} yards
+			</div>
+		</div>
+		
+		<div class="list">
+			<div class="item item-divider">
+				Kinetic Energy
+			</div>
+			<div class="item" ng-repeat="ke in trajectory">
+				{{ ke.kineticEnergy }} foot pounds at {{ ke.yardage }} yards
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

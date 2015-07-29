@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+#specs h1, #specs h2, #specs h3, #specs h4, #specs h5 { font-family: 'BebasNeueRegular'; color:#EEEEEE;}
+
+#specs p { color: #EEEEEE; line-height: 1; font-size: .9em; padding-left: 10px; margin: 4px 0; }
+#specs h3 { margin: 0; padding: 0; line-height: 1; }
+#specs h1 { font-size: 50px; line-height: .9; margin-top: 10px; text-align: center; margin-bottom: 4px;  }
+#specs span.spec-arrow { display: block; text-align: center; font-family:'BebasNeueRegular',sans-serif; color: rgb(184,222,255); font-size: 21px; }
+#specs .highlight { color: rgb(184,222,255); }
+
+#specs div.row { margin-bottom: 20px; border-bottom: 1px dotted rgba(255,255,255,.5); padding-bottom: 15px; }
+#specs .velocity { color: rgb(184,222,255); font-size: 80px; margin: 0; padding: 0; line-height: .8; margin-top:-10px !important; }
+p.disclaimer { margin: 0; padding: 0; font-size: 11px !important; }
+span.model-title { color: rgb(184,222,255); display: block; border-bottom: 4px solid rgba(255,255,255,0.5); line-height:.8; margin-bottom: 2px;font-size: 70px;}
+.scroll-content { background: rgba(0,0,0,0.75); }
+.pane, .view { background-image: url(../img/xcal-bg-01.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; }
+ion-tabs.tabs-color-active-positive .tab-item { color: #FFFFFF; }
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated
+{
+	color: rgb(184,222,255);
+}
+.tabs-striped, .tabs,.tab-nav.tabs { background-color: rgba(0,0,0,0.9); }
+ion-modal-view.modal.slide-in-up.ng-enter.active.ng-enter-active { background: rgba(0,0,0,.4); }
+
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/bebasneue/BebasNeue-webfont.eot');
+    src: url('../fonts/bebasneue/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/bebasneue/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

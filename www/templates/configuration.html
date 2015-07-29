@@ -1,0 +1,60 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-dark ">
+    <h1 class="title">Setup</h1>
+    
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeDialog()">Close</button>
+    </div>
+
+  </ion-header-bar>
+  <ion-content class="padding">
+  	<div style="text-align:center;"><img src="img/excalibur-top-logo.png" style="padding: 10px 20%;  max-width: 100%; "/></div>
+   	<div class="list card">
+      <div class="item item-divider">Welcome!</div>
+      <div class="item item-body">
+        <div>
+          To get started, let's set up your Excalibur Crossbow Configuration. Select your model, the arrow you shoot, and your 
+          point weight to get started.
+        </div>
+      </div>
+    </div>
+    
+	<form ng-submit="saveSetup(setup)">
+    <div class="list">
+    	<label class="item item-input item-select">
+    		<span class="input-label">Model</span>
+    		<select name="crossbow" ng-model="setup.bow">
+    			<option value=''>Select Your Crossbow</option>
+		    	<option ng-repeat="bow in bows" value="{{ $index }}">Excalibur {{ bow.name}}</option>
+		    </select>
+    	</label>
+    	
+    	<label class="item item-input item-select">
+    		<span class="input-label">Arrow</span>
+    		<select name="arrow" ng-model="setup.arrow">
+    			<option value =''>Select Your Arrow</option>
+    			<option ng-repeat="arrow in arrows" value="{{ $index }}">{{ arrow.arrow_name }} ({{ arrow.length | length}})</option>
+    		</select>
+    	</label>
+    	<label class="item item-input item-select">
+    		<span class="input-label">Point Weight</span>
+    		<select name="point_weight" ng-model="setup.point">
+    			<option value=''>Select Your Point</option>
+    			<option value="100">100 Grains</option>
+    			<option value="125">125 Grains</option>
+    			<option value="150">150 Grains</option>
+    			<option value="175">175 Grains</option>
+    			<option value="200">200 Grains</option>
+    			<option value="225">225 Grains</option>
+    			<option value="250">250 Grains</option>
+    		</select>
+    	</label>
+    	
+    	<div class="padding">
+    		<button type="submit" class="button button-block button-positive">Save Configuration</button>
+    	</div>
+    </div>
+   </form>
+    
+  </ion-content>
+</ion-modal-view>

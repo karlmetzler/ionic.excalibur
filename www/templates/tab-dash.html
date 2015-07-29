@@ -1,0 +1,58 @@
+<ion-view view-title="Excalibur Crossbow">
+  <ion-content class="padding" id="specs">
+   <div clas="row" style="margin-bottom: 15px;">
+   	<div class="col">
+   		<h1><span class="model-title">Excalibur</span> {{baseConfig.bow_name}}</h1>
+   		<span class="spec-arrow">[ {{baseConfig.point_weight}} Grain Point ]</span>
+   	</div>
+   </div>
+   
+   <div class="row" style="padding-top: 30px; ">
+   	<div class="col-25">
+   		<h3>Bow Speed:</h3>
+   	</div>
+   	<div class="col-75">
+   		<h3 class="velocity">{{ baseConfig.adjusted_velocity }} FPS</h3>
+   		<p class="disclaimer">based on current configuration, shooting a {{ baseConfig.total_arrow_weight }} grain arrow</p>
+   		<!--<h4 class="velocity-sub">{{ baseConfig.velocity }} FPS some kind of disclaimer</h4>-->
+   	</div>
+   </div>
+   <div class="row">
+   	<div class="col">
+   		<h3>Arrow Drop</h3>
+   		<canvas id="myChart" linechart options="chartOptions" data="chart" responsive=true></canvas>
+   		<!--<canvas chart="Line" options="chartOptions" data="chart" responsive=true></canvas>-->
+   		
+   	</div>
+   </div>
+   
+   <div class="row">
+   	<div class="col-25">
+   		<h3>Specs:</h3>
+   	</div>
+   	<div class="col-75">
+   		<h3>{{ baseConfig.bow_name }}</h3>
+   		<p>Draw Weight: {{ baseConfig.draw_weight }} pounds</p>
+   		<p>Powerstroke: {{ baseConfig.powerstroke | length }}</p>
+   		<p>Minimum Arrow Length: {{ baseConfig.min_arrow_length | length }}</p>
+   		<p>Minimum Arrow Weight: {{ baseConfig.min_arrow_weight | weight }}</p>
+   		<p>Kinetic Energy: {{ trajectory[0].kinetic_energy }} foot pounds</p>
+   	</div>
+   </div>
+   
+   <div class="row">
+   	<div class="col-25">
+   		<h3>Arrow:</h3>
+   	</div>
+   	<div class="col-75">
+   		<h3>{{ baseConfig.arrow_name }}</h3>
+   		<p>Arrow Weight: {{ baseConfig.arrow_weight | weight }}</p>
+   		<p>Point Weight: {{ baseConfig.point_weight | weight }}</p>
+   		<p class="highlight">Total Arrow Weight: {{ baseConfig.total_arrow_weight | weight }}</p>
+   	</div>
+   </div>
+    
+    
+    
+  </ion-content>
+</ion-view>
