@@ -121,7 +121,7 @@ angular.module('excalibur.services',['angles'])
 					horizontalDistanceYards: Math.round(convertToImperial(pat.x)/3),
 					verticalVelocity: pat.vy,
 					arrowSpeed: pat.speed.v,
-					kineticEnergy: pat.speed.e 
+					kinetic_energy: pat.speed.e 
 				};
 				
 				dataseries.push(data);				
